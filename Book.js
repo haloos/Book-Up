@@ -11,5 +11,18 @@ class Book {
               this.read = true;
           }
 
-    }
   }
+  readBook(pageNumber) {
+      if (pageNumber > this.pages || pageNumber < 1) {
+          alert('invalid page number')
+      } else {
+          this.currentPage = pageNumber;
+          if (this.currentPage == this.pages) {
+              this.read = true;
+          }
+      }
+  }
+}
+
+export { Book };
+
